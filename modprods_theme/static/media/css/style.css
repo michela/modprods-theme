@@ -13,7 +13,7 @@
 				position:absolute;
 				top: 10px;
 				left: 194px;
-				font-size: 21px;
+				font-size: 22px;
 				color:#26a9e6;
 			}
 
@@ -75,13 +75,13 @@
 			.navigation li{
 				display:inline;
 				padding-right: 16px;
-				font-size: 14px;
+				font-size: 16px;
 			}
 
 			.navigation li:after {
 				content:"•";
 				color:#26a9e6;
-				margin-left:20px;
+				margin-left:16px;
 			}
 			.navigation li:last-child:after {
 				content:"";
@@ -223,5 +223,6 @@
 			width:960px;
 			margin-top:12px;
 			color:#aeaeae;
+			font-size:12px;
 			}
 

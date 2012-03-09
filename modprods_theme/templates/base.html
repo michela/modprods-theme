@@ -1,8 +1,12 @@
+{% load pages_tags mezzanine_tags i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<title>Mod Prods Theme</title>
+	<title>{% block meta_title %}{% endblock %}</title>
+		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" /> 
+		<meta name="description" content="{% block meta_description %}{% endblock %}" /> 
+
 		<link rel="stylesheet" href="{{ MEDIA_URL }}css/bootstrap.css" />
 		<link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css"/>
 		<script src="{{ MEDIA_URL }}js/cufon-yui.js" type="text/javascript"></script>
@@ -14,7 +18,8 @@
 			Cufon.replace('.navigation', { fontFamily: 'FuturaStdBook'});
 			Cufon.replace('h1', { fontFamily: 'FuturaStdHeavy'});
 			Cufon.replace('h2', { fontFamily: 'FuturaStdBold'});
-			</script>
+		</script>
+		{% block extra_head %}{% endblock %}
 		</head>
 		<body>
 			<div id="head-wrap">
@@ -22,14 +27,7 @@
 					<div id="header">
 						<img id="logo" alt="modprods logo" src="{{ MEDIA_URL }}img/logo.png"/>
 						<h1>Media Magic for Events and Entertainment</h1>
-						<ul class="navigation">
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Productions</a></li>
-							<li><a href="#">Products &amp; Services</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Blog</a></li>
-						</ul>
-						<ul class="social-icons">
+							{% page_menu "pages/menus/primary.html" %}								<ul class="social-icons">
 							<li>
 							<a href="#" class="tw-icon">Twitter</a>
 							</li>
@@ -60,6 +58,8 @@
 			</div>
 			<div class="container">
 				<div id="content">
+						{% block main %}
+			{% endblock %}
 				</div>
 			</div>
 			<div id="footer-wrap">
