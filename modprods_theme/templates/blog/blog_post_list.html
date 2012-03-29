@@ -64,24 +64,16 @@
 {% endif %}
 
 {% for blog_post in blog_posts.object_list %}
-{% editable blog_post.title blog_post.publish_date %}
-<h2>
+<h3 class ="blog-title">
     <a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a>
-</h2>
-<h6>
+</h3>
+<h6 class="article-author">
     {{ blog_post.publish_date }}
     {% trans "by" %}:
     {% with blog_post.user as author %}
     <a href="{% url blog_post_list_author author %}">{{ author.get_full_name|default:author.username }}</a>
     {% endwith %}
-    {% if blog_post.category_list %}
-    {% trans "in" %}
-    {% for category in blog_post.category_list %}
-    <a href="{% url blog_post_list_category category.slug %}">{{ category }}</a>
-    {% endfor %}
-    {% endif %}
 </h6>
-{% endeditable %}
 
 {% if blog_post.featured_image %}
 <img class="featured-thumb" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 90 90 %}">
@@ -90,24 +82,31 @@
 {% editable blog_post.content %}
 {{ blog_post.description_from_content|safe }}
 {% endeditable %}
+<p>
+    <a href="{{ blog_post.get_absolute_url }}">{% trans "Read More>" %}</a>
+</p>
+<div class="blog-meta">
+<p>
 
-<p class="blog-list-detail">
-    {% if blog_post.keyword_list %}
-    {% trans "Tags" %}:
+    {% if blog_post.category_list %}
+    {% trans "CATEGORY" %}:
+    {% for category in blog_post.category_list %}
+    <a href="{% url blog_post_list_category category.slug %}">{{ category }},</a>
+    {% endfor %}
+    {% endif %}
+</p>
+<p>  
+  {% if blog_post.keyword_list %}
+    {% trans "TAGS" %}:
     {% for tag in blog_post.keyword_list %}
-    <a href="{% url blog_post_list_tag tag.slug %}">{{ tag }}</a>
+    <a href="{% url blog_post_list_tag tag.slug %}">{{ tag }},</a>
     {% endfor %}
     <br>
     {% endif %}
-    <a href="{{ blog_post.get_absolute_url }}">{% trans "Read More>" %}</a>
 </p>
 {% endfor %}
 
 {% pagination_for blog_posts %}
-
-{% if settings.COMMENTS_DISQUS_SHORTNAME %}
-{% include "generic/includes/disqus_counts.html" %}
-{% endif %}
 
 {% endblock %}
 

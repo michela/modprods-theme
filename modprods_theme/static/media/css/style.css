@@ -225,4 +225,14 @@
 			color:#aeaeae;
 			font-size:12px;
 			}
-
+.blog-title a{
+color:#333;
+font-family:Arial,sans-serif;
+font-size:28px;
+}
+.article-author{
+font-style:italic;
+font-weight:normal;
+font-size:13px;
+font-family:Arial,sans-serif;
+}
