@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base-sidebar.html" %}
 {% load i18n mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
 {% block meta_title %}{% if blog_page %}{{ blog_page.title }}{% else %}{% trans "Blog" %}{% endif %}{% endblock %}
@@ -57,10 +57,6 @@
         {{ author.get_full_name|default:author.username }}
     {% endif %}{% endif %}{% endif %}{% endif %}
     </p>
-{% else %}
-    {% editable blog_page.content %}
-    {{ blog_page.content|safe }}
-    {% endeditable %}
 {% endif %}
 
 {% for blog_post in blog_posts.object_list %}
@@ -80,10 +76,12 @@
 {% endif %}
 
 {% editable blog_post.content %}
+<div class="blog-description">
 {{ blog_post.description_from_content|safe }}
 {% endeditable %}
+</div>
 <p>
-    <a href="{{ blog_post.get_absolute_url }}">{% trans "Read More>" %}</a>
+    <a class="italics" href="{{ blog_post.get_absolute_url }}">{% trans "Read more >" %}</a>
 </p>
 <div class="blog-meta">
 <p>
@@ -105,11 +103,14 @@
     {% endif %}
 </p>
 {% endfor %}
+</div>
 
 {% pagination_for blog_posts %}
 
 {% endblock %}
 
 {% block right_panel %}
+<div class="grey-bg">
 {% include "blog/includes/filter_panel.html" %}
+</div>
 {% endblock %}

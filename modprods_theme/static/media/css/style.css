@@ -57,8 +57,6 @@
 			}
 
 			#content{
-				height: 1062px;
-				padding-top: 38px;
 			}
 			#content .tagline{
 
@@ -230,9 +228,146 @@ color:#333;
 font-family:Arial,sans-serif;
 font-size:28px;
 }
+.blog-title{
+margin-bottom:5px;
+}
 .article-author{
 font-style:italic;
 font-weight:normal;
 font-size:13px;
 font-family:Arial,sans-serif;
+}
+
+#team-content, #contact-content {
+font-family:Arial,sans-serif;
+font-size:16px;
+font-weight:bold;
+}
+#team-content div.team-description p{
+font-size:16px;
+line-height:22px;
+margin-bottom:45px;
+}
+.team-heading{
+margin-bottom:20px;
+}
+.member-photo{
+height:148px;
+width:236px;
+margin-bottom:12px;
+}
+
+.blog-description{
+font-size:13pt;
+}
+.blog-meta{
+background:#f2f2f2;
+width:100%;
+}
+
+.blog-meta p{
+padding:18px 18px 4px 18px;;
+}
+
+.italics{
+font-style:italic;
+}
+
+.grey-bg{
+background:#333;
+}
+
+.mp-sidebar{
+width:180px;
+float: left;
+margin-left: 30px;
+}
+
+.wide-col{
+width:360px;
+float:left;
+}
+
+.first.wide-col{
+margin-right:30px;
+}
+.contact-details{
+list-style-type:none;
+margin:5px 10px 36px 0;;
+}
+.send-message{
+background:#f2f2f2;
+padding-left:30px;
+}
+.send-message input, .send-message textarea{
+margin-bottom:0px;
+width: 86%;
+}
+h2{
+margin-bottom:25px;
+}
+input.submit-button{
+background:#28aeed;
+height:40px;
+color:#fff;
+width:100px;
+font-size:22px;
+font-weight:bold;
+margin-bottom:20px;
+margin-top:9px;
+}
+
+.member-description{
+float:left;
+margin-left:30px;
+width:500px;
+}
+
+.member-title{
+margin-bottom:8px;
+font-weight:normal;
+font-size:16px;
+}
+
+.member-description p{
+font-style:normal;
+font-size:13px;
+font-weight: normal;
+}
+
+#product-content .section-heading{
+height:40px;
+width:100%;
+color:white;
+background:#28aeed;
+line-height:40px;
+padding-left:10px;
+box-sizing: border-box;
+margin-bottom:30px;
+font-size:21px;
+}
+
+.ps-col{
+float:left;
+margin-left:30px;
+width:230px;
+margin-bottom:30px;
+}
+
+.ps-col h4{
+color:#333;
+font-size:17px;
+margin-bottom:12px;
+}
+
+.ps-col p.desc{
+
+margin-bottom:15px;
+color:#8f8f8f;
+}
+.ps-col a.read{
+}
+
+.row .row{
+margin-left:-30px;
 }
