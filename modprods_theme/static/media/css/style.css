@@ -335,7 +335,7 @@ font-size:13px;
 font-weight: normal;
 }
 
-#product-content .section-heading{
+.section-heading{
 height:40px;
 width:100%;
 color:white;
@@ -370,4 +370,19 @@ color:#8f8f8f;
 
 .row .row{
 margin-left:-30px;
+}
+
+.sidebar-readmore{
+background:#333;
+color:#fff;
+padding: 22px 10px;
+font-weight:bold;
+}
+
+.mp-sidebar h3{
+color:#fff;
+background:#333;
+font-size:16px;
+padding:7px 0 7px 10px;
+margin-bottom:14px;
 }
