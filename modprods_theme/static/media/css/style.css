@@ -86,7 +86,7 @@
 			}
 
 
-			.social-icons{
+			#header .social-icons{
 				position:absolute;
 			}
 
@@ -122,12 +122,21 @@
 				background:url('../img/icons.png');
 				background-position:-104px 0;
 			}
+
 			.gp-icon{
 				background:url('../img/icons.png');
 				background-position:-131px 0;
 			}
 
+			.ms-icon{
+				background:url('../img/icons.png');
+				background-position:-157px 0;
+			}
 
+			.yt-icon{
+				background:url('../img/icons.png');
+				background-position:-183px 0;
+			}
 			.home.carousel{
 				height:362px;
 				width:100%;
@@ -254,7 +263,7 @@ margin-bottom:20px;
 .member-photo{
 height:148px;
 width:236px;
-margin-bottom:12px;
+margin-bottom:0px;
 }
 
 .blog-description{
@@ -385,4 +394,10 @@ background:#333;
 font-size:16px;
 padding:7px 0 7px 10px;
 margin-bottom:14px;
+}
+
+.span3 .social-icons{
+
+margin:0px 0px 50px 0px;;
+
 }
