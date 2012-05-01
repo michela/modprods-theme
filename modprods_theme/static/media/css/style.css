@@ -22,6 +22,11 @@
 				right: 1px;
 			}
 
+			#logo{
+				position:absolute;
+				top:5px;
+			}
+
 			#header .search {
 				position:absolute;
 				right:1px;
