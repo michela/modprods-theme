@@ -406,3 +406,20 @@ margin-bottom:14px;
 margin:0px 0px 50px 0px;;
 
 }
+
+.tag-cloud{
+margin:0;
+}
+
+.tag-cloud li{
+display:inline-block;
+}
+.tag-cloud li a{
+color:#5b5b5b;
+text-decoration:underline;
+}
+
+.tag-weight-1 {font-size:16px;}
+.tag-weight-2 {font-size:18px;}
+.tag-weight-3 {font-size:20px;}
+.tag-weight-4 {font-size:22px;}
