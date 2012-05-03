@@ -18,6 +18,7 @@
 			Cufon.replace('.navigation', { fontFamily: 'FuturaStdBook'});
 			Cufon.replace('h1', { fontFamily: 'FuturaStdHeavy'});
 			Cufon.replace('h2', { fontFamily: 'FuturaStdBold'});
+			Cufon.replace('.mp-sidebar h3',{fontFamily: 'FuturaStdBold'});
 		</script>
 		{% block extra_head %}{% endblock %}
 		</head>
@@ -85,7 +86,7 @@ ta sunt explicabo. ratione voluptatem sequi nesciunt.
 {% keywords_for blog.blogpost as tags %}
 {% if tags %}
 <h3> Tag Cloud</h3>
-<ul class="unstyled tags">
+<ul class="tag-cloud">
 {% for tag in tags %}
 <li>
     <a href="{% url blog_post_list_tag tag.slug %}"
